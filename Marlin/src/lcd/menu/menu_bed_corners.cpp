@@ -56,24 +56,48 @@ static_assert(LEVEL_CORNERS_Z_HOP >= 0, "LEVEL_CORNERS_Z_HOP must be >= 0. Pleas
 static int8_t bed_corner;
 static inline void _lcd_goto_next_corner() {
   line_to_z(LEVEL_CORNERS_Z_HOP);
-  switch (bed_corner) {
-    case 0:
-      current_position.set(X_MIN_BED + LEVEL_CORNERS_INSET, Y_MIN_BED + LEVEL_CORNERS_INSET);
-      break;
-    case 1:
-      current_position.x = X_MAX_BED - (LEVEL_CORNERS_INSET);
-      break;
-    case 2:
-      current_position.y = Y_MAX_BED - (LEVEL_CORNERS_INSET);
-      break;
-    case 3:
-      current_position.x = X_MIN_BED + LEVEL_CORNERS_INSET;
-      break;
-    #if ENABLED(LEVEL_CENTER_TOO)
-      case 4:
-        current_position.set(X_CENTER, Y_CENTER);
+
+  #ifdef LEVEL_CORNERS_MANUAL // Manual position instead of an inset
+    static constexpr float level_corners_manual[] = LEVEL_CORNERS_MANUAL;
+    switch (bed_corner) {
+      case 0:
+        current_position.set(level_corners_manual[0], level_corners_manual[1]);
         break;
-    #endif
+      case 1:
+        current_position.x = level_corners_manual[2];
+        break;
+      case 2:
+        current_position.y = level_corners_manual[3];
+        break;
+      case 3:
+        current_position.x = level_corners_manual[0];
+        break;
+      #if ENABLED(LEVEL_CENTER_TOO)
+        case 4:
+          current_position.set((level_corners_manual[2] - level_corners_manual[0]) / 2 + level_corners_manual[0],
+            (level_corners_manual[3] - level_corners_manual[1]) / 2 + level_corners_manual[1]);
+          break;
+      #endif
+  #else
+    switch (bed_corner) {
+      case 0:
+        current_position.set(X_MIN_BED + LEVEL_CORNERS_INSET, Y_MIN_BED + LEVEL_CORNERS_INSET);
+        break;
+      case 1:
+        current_position.x = X_MAX_BED - (LEVEL_CORNERS_INSET);
+        break;
+      case 2:
+        current_position.y = Y_MAX_BED - (LEVEL_CORNERS_INSET);
+        break;
+      case 3:
+        current_position.x = X_MIN_BED + LEVEL_CORNERS_INSET;
+        break;
+      #if ENABLED(LEVEL_CENTER_TOO)
+        case 4:
+          current_position.set(X_CENTER, Y_CENTER);
+          break;
+      #endif
+  #endif
   }
   line_to_current_position(MMM_TO_MMS(manual_feedrate_mm_m.x));
   line_to_z(LEVEL_CORNERS_HEIGHT);
