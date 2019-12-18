@@ -71,7 +71,7 @@
 // @section info
 
 // Author info of this build printed to the host during boot and M115
-#define STRING_CONFIG_H_AUTHOR "CopterTec v1.3.0" // Who made the changes.
+#define STRING_CONFIG_H_AUTHOR "CopterTec 1.3.8 BT" // Who made the changes.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
 /**
@@ -476,9 +476,9 @@
   // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
   // Ultimaker
-  #define DEFAULT_Kp 22.2
-  #define DEFAULT_Ki 1.08
-  #define DEFAULT_Kd 114
+  //#define DEFAULT_Kp 22.2
+  //#define DEFAULT_Ki 1.08
+  //#define DEFAULT_Kd 114
 
   // MakerGear
   //#define DEFAULT_Kp 7.0
@@ -491,9 +491,9 @@
   //#define DEFAULT_Kd 440
 
   // SOVOL SV01 with stock CR-10S Hotend and fan 100%
-  //#define  DEFAULT_Kp 29.76
-  //#define  DEFAULT_Ki 2.93
-  //#define  DEFAULT_Kd 75.58
+  #define  DEFAULT_Kp 32.2
+  #define  DEFAULT_Ki 2.95
+  #define  DEFAULT_Kd 87
 
 #endif // PIDTEMP
 
@@ -792,7 +792,7 @@
  *   http://blog.kyneticcnc.com/2018/10/computing-junction-deviation-for-marlin.html
  */
 #if DISABLED(CLASSIC_JERK)
-  #define JUNCTION_DEVIATION_MM 0.04 // (mm) Distance from real junction edge
+  #define JUNCTION_DEVIATION_MM 0.06 // (mm) Distance from real junction edge
 #endif
 
 /**
@@ -1057,16 +1057,16 @@
 // @section machine
 
 // The size of the print bed
-#define X_BED_SIZE 300
+#define X_BED_SIZE 290
 #define Y_BED_SIZE 255
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
-#define X_MIN_POS 10
+#define X_MIN_POS 0
 #define Y_MIN_POS 0
 #define Z_MIN_POS 0
-#define X_MAX_POS 310
+#define X_MAX_POS 300
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 300
+#define Z_MAX_POS 320
 
 /**
  * Software Endstops
@@ -1287,7 +1287,8 @@
 #define LEVEL_BED_CORNERS
 
 #if ENABLED(LEVEL_BED_CORNERS)
-  #define LEVEL_CORNERS_INSET 45    // (mm) An inset for corner leveling
+  #define LEVEL_CORNERS_MANUAL  { 37, 40, 243, 215 }  // (mm) Manual position { X-front-left, Y-front-left, X-back-right, Y-back-right }
+  #define LEVEL_CORNERS_INSET 30    // (mm) An inset for corner leveling
   #define LEVEL_CORNERS_Z_HOP  4.0  // (mm) Move nozzle up before moving between corners
   #define LEVEL_CORNERS_HEIGHT 0.0  // (mm) Z height of nozzle at leveling points
   #define LEVEL_CENTER_TOO        // Move to the center after the last corner
@@ -1320,7 +1321,7 @@
 // - Move the Z probe (or nozzle) to a defined XY point before Z Homing when homing all axes (G28).
 // - Prevent Z homing when the Z probe is outside bed area.
 //
-#define Z_SAFE_HOMING
+//#define Z_SAFE_HOMING
 
 #if ENABLED(Z_SAFE_HOMING)
   #define Z_SAFE_HOMING_X_POINT ((X_BED_SIZE) / 2)    // X point for Z homing when homing all axes (G28).
@@ -1640,7 +1641,7 @@
  *
  * Use CRC checks and retries on the SD communication.
  */
-//#define SD_CHECK_AND_RETRY
+#define SD_CHECK_AND_RETRY
 
 /**
  * LCD Menu Items
