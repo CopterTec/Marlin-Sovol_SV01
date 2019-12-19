@@ -248,7 +248,7 @@
 #elif MB(HJC2560C_REV2)
   #include "mega/pins_HJC2560C_REV2.h"          // ATmega2560                             env:megaatmega2560
 #elif MB(SOVOL_SV01)
-  #include "mega/pins_SOVOL_SV01.h"          // ATmega2560                             env:megaatmega2560
+  #include "mega/pins_SOVOL_SV01.h"             // ATmega2560                             env:megaatmega2560
 
 //
 // ATmega1281, ATmega2561

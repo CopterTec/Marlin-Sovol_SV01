@@ -57,7 +57,8 @@ static int8_t bed_corner;
 static inline void _lcd_goto_next_corner() {
   line_to_z(LEVEL_CORNERS_Z_HOP);
 
-  #ifdef LEVEL_CORNERS_MANUAL // Manual position instead of an inset
+  // Manual position instead of an inset
+  #ifdef LEVEL_CORNERS_MANUAL
     static constexpr float level_corners_manual[] = LEVEL_CORNERS_MANUAL;
     switch (bed_corner) {
       case 0:
