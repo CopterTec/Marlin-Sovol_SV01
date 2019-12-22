@@ -356,14 +356,16 @@
   #include "lpc1768/pins_BIQU_BQ111_A4.h"       // LPC1768                                env:LPC1768
 #elif MB(SELENA_COMPACT)
   #include "lpc1768/pins_SELENA_COMPACT.h"      // LPC1768                                env:LPC1768
-#elif MB(BIGTREE_SKR_V1_1)
-  #include "lpc1768/pins_BTT_SKR_V1_1.h"        // LPC1768                                env:LPC1768
 #elif MB(BIQU_B300_V1_0)
   #include "lpc1768/pins_BIQU_B300_V1.0.h"      // LPC1768                                env:LPC1768
-#elif MB(BIGTREE_SKR_V1_3)
-  #include "lpc1768/pins_BTT_SKR_V1_3.h"        // LPC1768                                env:LPC1768
 #elif MB(GMARSH_X6_REV1)
   #include "lpc1768/pins_GMARSH_X6_REV1.h"      // LPC1768                                env:LPC1768
+#elif MB(BIGTREE_SKR_V1_1)
+  #include "lpc1768/pins_BTT_SKR_V1_1.h"        // LPC1768                                env:LPC1768
+#elif MB(BIGTREE_SKR_V1_3)
+  #include "lpc1768/pins_BTT_SKR_V1_3.h"        // LPC1768                                env:LPC1768
+#elif MB(BIGTREE_SKR_V1_4)
+  #include "lpc1768/pins_BTT_SKR_V1_4.h"        // LPC1768                                env:LPC1768
 
 //
 // LPC1769 ARM Cortex M3
@@ -495,6 +497,10 @@
   #include "stm32/pins_FYSETC_CHEETAH_V12.h"    // STM32F1                                env:STM32F103RC_fysetc
 #elif MB(LONGER3D_LK)
   #include "stm32/pins_LONGER3D_LK.h"           // STM32F1                                env:STM32F103VE_longer
+#elif MB(MKS_ROBIN_LITE3)
+  #include "stm32/pins_MKS_ROBIN_LITE3.h"       // STM32F1                                env:mks_robin_lite3
+#elif MB(MKS_ROBIN_PRO)
+  #include "stm32/pins_MKS_ROBIN_PRO.h"         // STM32F1                                env:mks_robin_pro
 
 //
 // ARM Cortex-M4F
@@ -533,6 +539,8 @@
   #include "stm32/pins_VAKE403D.h"              // STM32F4                                env:STM32F4
 #elif MB(FYSETC_S6)
   #include "stm32/pins_FYSETC_S6.h"             // STM32F4                                env:FYSETC_S6
+#elif MB(FLYF407ZG)
+  #include "stm32/pins_FLYF407ZG.h"             // STM32F4                                env:FLYF407ZG
 
 //
 // ARM Cortex M7
@@ -550,6 +558,10 @@
 #elif MB(ESPRESSIF_ESP32)
 
   #include "esp32/pins_ESP32.h"                 // ESP32                                  env:esp32
+#elif MB(MRR_ESPA)
+  #include "esp32/pins_MRR_ESPA.h"              // ESP32                                  env:esp32
+#elif MB(MRR_ESPE)
+  #include "esp32/pins_MRR_ESPE.h"              // ESP32                                  env:esp32
 
 //
 // Linux Native Debug board
