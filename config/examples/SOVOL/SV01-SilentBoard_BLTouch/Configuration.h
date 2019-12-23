@@ -491,9 +491,9 @@
   //#define DEFAULT_Kd 440
 
   // SOVOL SV01 with stock CR-10S Hotend and fan 100%
-  #define  DEFAULT_Kp 32.2
-  #define  DEFAULT_Ki 2.95
-  #define  DEFAULT_Kd 87
+  #define  DEFAULT_Kp 32.0
+  #define  DEFAULT_Ki 3.0
+  #define  DEFAULT_Kd 85.0
 
 #endif // PIDTEMP
 
