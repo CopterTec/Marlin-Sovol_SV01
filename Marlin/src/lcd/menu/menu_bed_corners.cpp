@@ -81,23 +81,23 @@ static inline void _lcd_goto_next_corner() {
       #endif
   #else
     switch (bed_corner) {
-      case 0:
-        current_position.set(X_MIN_BED + LEVEL_CORNERS_INSET, Y_MIN_BED + LEVEL_CORNERS_INSET);
-        break;
-      case 1:
-        current_position.x = X_MAX_BED - (LEVEL_CORNERS_INSET);
-        break;
-      case 2:
-        current_position.y = Y_MAX_BED - (LEVEL_CORNERS_INSET);
-        break;
-      case 3:
-        current_position.x = X_MIN_BED + LEVEL_CORNERS_INSET;
-        break;
-      #if ENABLED(LEVEL_CENTER_TOO)
-        case 4:
-          current_position.set(X_CENTER, Y_CENTER);
+        case 0:
+          current_position.set(X_MIN_BED + LEVEL_CORNERS_INSET, Y_MIN_BED + LEVEL_CORNERS_INSET);
           break;
-      #endif
+        case 1:
+          current_position.x = X_MAX_BED - (LEVEL_CORNERS_INSET);
+          break;
+        case 2:
+          current_position.y = Y_MAX_BED - (LEVEL_CORNERS_INSET);
+          break;
+        case 3:
+          current_position.x = X_MIN_BED + LEVEL_CORNERS_INSET;
+          break;
+        #if ENABLED(LEVEL_CENTER_TOO)
+          case 4:
+            current_position.set(X_CENTER, Y_CENTER);
+            break;
+        #endif
   #endif
   }
   line_to_current_position(MMM_TO_MMS(manual_feedrate_mm_m.x));
