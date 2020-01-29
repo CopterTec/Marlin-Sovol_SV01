@@ -252,7 +252,7 @@
   #include "mega/pins_LEAPFROG_XEED2015.h"      // ATmega2560                             env:megaatmega2560
 #elif MB(SOVOL_SV01)	
   #include "mega/pins_SOVOL_SV01.h"             // ATmega2560                             env:megaatmega2560
-  
+
 //
 // ATmega1281, ATmega2561
 //
