@@ -1,4 +1,4 @@
-﻿# Marlin 3D Printer Firmware for Sovol SV01 3D printers
+﻿# Marlin 3D Printer Firmware for Sovol SV01
 
 ![GitHub](https://img.shields.io/github/license/marlinfirmware/marlin.svg)
 ![GitHub contributors](https://img.shields.io/github/contributors/marlinfirmware/marlin.svg)
