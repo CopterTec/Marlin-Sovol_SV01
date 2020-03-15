@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -290,7 +290,7 @@ namespace Language_de {
   PROGMEM Language_Str MSG_CONTRAST                        = _UxGT("LCD-Kontrast");
   PROGMEM Language_Str MSG_STORE_EEPROM                    = _UxGT("Konfig. speichern");
   PROGMEM Language_Str MSG_LOAD_EEPROM                     = _UxGT("Konfig. laden");
-  PROGMEM Language_Str MSG_RESTORE_FAILSAFE                = _UxGT("Standardwerte laden");
+  PROGMEM Language_Str MSG_RESTORE_DEFAULTS                = _UxGT("Standardwerte laden");
   PROGMEM Language_Str MSG_INIT_EEPROM                     = _UxGT("Werkseinstellungen");
   PROGMEM Language_Str MSG_MEDIA_UPDATE                    = _UxGT("FW Update vom Medium");
   PROGMEM Language_Str MSG_RESET_PRINTER                   = _UxGT("Drucker neustarten");
@@ -343,23 +343,23 @@ namespace Language_de {
   PROGMEM Language_Str MSG_FILAMENTUNLOAD                  = _UxGT("Filament entladen");
   PROGMEM Language_Str MSG_FILAMENTUNLOAD_E                = _UxGT("Filament entladen *");
   PROGMEM Language_Str MSG_FILAMENTUNLOAD_ALL              = _UxGT("Alles entladen");
-  PROGMEM Language_Str MSG_INIT_MEDIA                      = _UxGT("Medium initial.");  // Manually initialize the SD-card via user interface
+  PROGMEM Language_Str MSG_ATTACH_MEDIA                    = _UxGT("Medium initial.");  // Manually initialize the SD-card via user interface
   PROGMEM Language_Str MSG_CHANGE_MEDIA                    = _UxGT("Medium getauscht"); // SD-card changed by user. For machines with no autocarddetect. Both send "M21"
   PROGMEM Language_Str MSG_RELEASE_MEDIA                   = _UxGT("Medium freigeben"); // if Marlin gets confused - M22
   PROGMEM Language_Str MSG_ZPROBE_OUT                      = _UxGT("Z-Sonde außerhalb");
   PROGMEM Language_Str MSG_SKEW_FACTOR                     = _UxGT("Korrekturfaktor");
   PROGMEM Language_Str MSG_BLTOUCH                         = _UxGT("BLTouch");
-  PROGMEM Language_Str MSG_BLTOUCH_SELFTEST                = _UxGT("BLTouch Selbsttest");
-  PROGMEM Language_Str MSG_BLTOUCH_RESET                   = _UxGT("BLTouch zurücks.");
-  PROGMEM Language_Str MSG_BLTOUCH_DEPLOY                  = _UxGT("BLTouch ausfahren");
-  PROGMEM Language_Str MSG_BLTOUCH_SW_MODE                 = _UxGT("BLTouch SW-Modus");
-  PROGMEM Language_Str MSG_BLTOUCH_5V_MODE                 = _UxGT("BLTouch 5V-Modus");
-  PROGMEM Language_Str MSG_BLTOUCH_OD_MODE                 = _UxGT("BLTouch OD-Modus");
-  PROGMEM Language_Str MSG_BLTOUCH_MODE_STORE              = _UxGT("BLTouch Mode Store");
-  PROGMEM Language_Str MSG_BLTOUCH_MODE_STORE_5V           = _UxGT("BLTouch auf 5V");
-  PROGMEM Language_Str MSG_BLTOUCH_MODE_STORE_OD           = _UxGT("BLTouch auf OD");
-  PROGMEM Language_Str MSG_BLTOUCH_STOW                    = _UxGT("BLTouch einfahren");
-  PROGMEM Language_Str MSG_BLTOUCH_MODE_ECHO               = _UxGT("BLTouch Modus: ");
+  PROGMEM Language_Str MSG_BLTOUCH_SELFTEST                = _UxGT("Selbsttest");
+  PROGMEM Language_Str MSG_BLTOUCH_RESET                   = _UxGT("Zurücksetzen");
+  PROGMEM Language_Str MSG_BLTOUCH_DEPLOY                  = _UxGT("Ausfahren");
+  PROGMEM Language_Str MSG_BLTOUCH_SW_MODE                 = _UxGT("SW-Modus");
+  PROGMEM Language_Str MSG_BLTOUCH_5V_MODE                 = _UxGT("5V-Modus");
+  PROGMEM Language_Str MSG_BLTOUCH_OD_MODE                 = _UxGT("OD-Modus");
+  PROGMEM Language_Str MSG_BLTOUCH_MODE_STORE              = _UxGT("Mode-Store");
+  PROGMEM Language_Str MSG_BLTOUCH_MODE_STORE_5V           = _UxGT("Setze auf 5V");
+  PROGMEM Language_Str MSG_BLTOUCH_MODE_STORE_OD           = _UxGT("Setze auf OD");
+  PROGMEM Language_Str MSG_BLTOUCH_STOW                    = _UxGT("Einfahren");
+  PROGMEM Language_Str MSG_BLTOUCH_MODE_ECHO               = _UxGT("Modus: ");
   PROGMEM Language_Str MSG_BLTOUCH_MODE_CHANGE             = _UxGT("ACHTUNG: Falsche Einstellung - kann zu Beschädigung führen! Fortfahren?");
   PROGMEM Language_Str MSG_TOUCHMI_PROBE                   = _UxGT("TouchMI");
   PROGMEM Language_Str MSG_TOUCHMI_INIT                    = _UxGT("TouchMI initial.");

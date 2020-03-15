@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -41,12 +41,20 @@
 // EEPROM Emulation
 //
 #define FLASH_EEPROM_EMULATION
+#if ENABLED(FLASH_EEPROM_EMULATION)
+  #define FLASH_EEPROM_LEVELING
+#endif
 //#define SRAM_EEPROM_EMULATION
 //#define I2C_EEPROM
 #ifdef I2C_EEPROM
   #undef E2END // Defined in Arduino Core STM32 to be used with EEPROM emulation. This board uses a real EEPROM.
   #define E2END 0xFFF // 4KB
 #endif
+
+//
+// Servos
+//
+#define SERVO0_PIN         PA3
 
 //
 // Limit Switches
@@ -59,10 +67,12 @@
 #define Z_MAX_PIN          PA3
 
 //
-// Servos
-// share with Z_MAX_PIN
+// Filament Sensor
+// share with X_MAX_PIN
 //
-#define SERVO0_PIN         PA3
+#ifndef FIL_RUNOUT_PIN
+  #define FIL_RUNOUT_PIN   PA1
+#endif
 
 //
 // Steppers
@@ -160,6 +170,7 @@
 //#define KILL_PIN           PC5
 
 #define SDSS               PA4
+#define SD_DETECT_PIN  	   PB10
 
 //
 // LCD / Controller
@@ -189,7 +200,6 @@
 
     #define BTN_EN1        PC6
     #define BTN_EN2        PC7
-    #define SD_DETECT_PIN  PB10
 
     #define LCD_SDSS       PA4
 

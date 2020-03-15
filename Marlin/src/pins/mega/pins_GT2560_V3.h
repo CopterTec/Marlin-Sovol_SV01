@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -22,7 +22,7 @@
 #pragma once
 
 /**
- * GT2560 V3.0 pin assignment
+ * GT2560 RevB + GT2560 V3.0 + GT2560 V3.1 + GT2560 V4.0 pin assignment
  */
 
 #if !defined(__AVR_ATmega1280__) && !defined(__AVR_ATmega2560__)

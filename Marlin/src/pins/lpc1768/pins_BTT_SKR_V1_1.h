@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -103,7 +103,7 @@
 
 // Trinamic driver support
 
-#if HAS_TRINAMIC
+#if HAS_TRINAMIC_CONFIG
   // Using TMC devices in intelligent mode requires extra connections to each device. Unfortunately
   // the SKR does not have many free pins (especially if a display is in use). The SPI-based devices
   // will require 3 connections (clock, mosi, miso), plus a chip select line (CS) for each driver.
@@ -230,4 +230,4 @@
 #endif
 
 // Include common SKR pins
-#include "pins_BTT_SKR.h"
+#include "pins_BTT_SKR_common.h"

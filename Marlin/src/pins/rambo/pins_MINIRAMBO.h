@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -26,7 +26,7 @@
  */
 
 #ifndef __AVR_ATmega2560__
-  #error "Oops! Select 'RAMBo' in 'Tools > Board.'"
+  #error "Oops! Select 'RAMBo' in 'Tools > Board' or the Mega2560 environment in PlatformIO."
 #endif
 
 #if MB(MINIRAMBO_10A)

@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -37,7 +37,7 @@
 #endif
 
 #if ENABLED(POWER_LOSS_RECOVERY)
-  #include "../../feature/power_loss_recovery.h"
+  #include "../../feature/powerloss.h"
 #endif
 
 #if HAS_BED_PROBE
@@ -317,14 +317,11 @@ void menu_configuration() {
   #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
     SUBMENU(MSG_ZPROBE_ZOFFSET, lcd_babystep_zoffset);
   #elif HAS_BED_PROBE
-    EDIT_ITEM(LCD_Z_OFFSET_TYPE, MSG_ZPROBE_ZOFFSET, &probe_offset.z, Z_PROBE_OFFSET_RANGE_MIN, Z_PROBE_OFFSET_RANGE_MAX);
+    EDIT_ITEM(LCD_Z_OFFSET_TYPE, MSG_ZPROBE_ZOFFSET, &probe.offset.z, Z_PROBE_OFFSET_RANGE_MIN, Z_PROBE_OFFSET_RANGE_MAX);
   #endif
 
   const bool busy = printer_busy();
   if (!busy) {
-    //
-    // Delta Calibration
-    //
     #if EITHER(DELTA_CALIBRATION_MENU, DELTA_AUTO_CALIBRATION)
       SUBMENU(MSG_DELTA_CALIBRATE, menu_delta_calibrate);
     #endif
@@ -397,7 +394,7 @@ void menu_configuration() {
   #endif
 
   if (!busy)
-    ACTION_ITEM(MSG_RESTORE_FAILSAFE, []{
+    ACTION_ITEM(MSG_RESTORE_DEFAULTS, []{
       settings.reset();
       #if HAS_BUZZER
         ui.completion_feedback();

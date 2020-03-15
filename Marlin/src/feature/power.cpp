@@ -1,6 +1,6 @@
 /**
  * Marlin 3D Printer Firmware
- * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
+ * Copyright (c) 2020 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
  *
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
@@ -108,7 +108,7 @@ void Power::power_on() {
   if (!powersupply_on) {
     PSU_PIN_ON();
 
-    #if HAS_TRINAMIC
+    #if HAS_TRINAMIC_CONFIG
       delay(PSU_POWERUP_DELAY); // Wait for power to settle
       restore_stepper_drivers();
     #endif
