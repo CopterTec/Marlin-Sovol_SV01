@@ -14,7 +14,7 @@ Please let us know if Marlin misbehaves in any way. Volunteers are standing by!
 
 Marlin 2.0 takes this popular RepRap firmware to the next level by adding support for much faster 32-bit and ARM-based boards while improving support for 8-bit AVR boards. Read about Marlin's decision to use a "Hardware Abstraction Layer" below.
 
-Download earlier versions of Marlin on the [Releases page](https://github.com/MarlinFirmware/Marlin/releases).
+Download earlier versions of Marlin on the [Releases page](https://github.com/CopterTec/Marlin-Sovol_SV01/releases).
 
 ## Building Marlin 2.0
 
@@ -48,6 +48,7 @@ For best results getting help with configuration and troubleshooting, please use
 - [Tom's 3D Forums](https://discuss.toms3d.org/)
 - Facebook Group ["Marlin Firmware for 3D Printers"](https://www.facebook.com/groups/3Dtechtalk/)
 - [Marlin Configuration](https://www.youtube.com/results?search_query=marlin+configuration) on YouTube
+- [CopterTec](https://www.coptertec.de/news/2019/marlin-2-0-for-sovol-sv01/) - Discuss with CopterTec about the Sovol SV01
 
 ## Credits
 
