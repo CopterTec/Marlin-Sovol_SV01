@@ -25,12 +25,14 @@ To build Marlin 2.0 you'll need [Arduino IDE 1.8.8 or newer](https://www.arduino
 
 ### Supported Platforms
 
-| Printer name | Printer modification | Firmware prefix | Printer info screen |
-| ------------- | ------------- | ------------- | ------------- |
-| Sovol SV01 | Original board | *nothing* | *nothing* |
-| Sovol SV01 | Original board with BLTouch | BLTouch | BT |
-| Sovol SV01 | SilentBoard  | SilentBoard | SB |
-| Sovol SV01 | SilentBoard with BLTouch  | SilentBoard_BLTouch | SBBT |
+| Printer name | Circuit board | Probe | Firmware prefix | Printer info screen |
+| ------------- | ------------- | ------------- | ------------- | ------------- |
+| Sovol SV01 | Original | *nothing* | *nothing* | CopterTec |
+| Sovol SV01 | Original | BLTouch | BLTouch | CopterTec BT |
+| Sovol SV01 | SilentBoard | *nothing* | SilentBoard | CopterTec SB |
+| Sovol SV01 | SilentBoard | BLTouch | SilentBoard_BLTouch | CopterTec SBBT |
+| Sovol SV01 | Silent Mainboard 1.1.5 | *nothing* | SilentBoard | CopterTec SB |
+| Sovol SV01 | Silent Mainboard 1.1.5 | BLTouch | SilentBoard_BLTouch | CopterTec SBBT |
 
 ## Submitting Changes
 
