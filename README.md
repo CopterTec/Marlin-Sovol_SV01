@@ -16,6 +16,10 @@ Marlin 2.0 takes this popular RepRap firmware to the next level by adding suppor
 
 Download earlier versions of Marlin on the [Releases page](https://github.com/CopterTec/Marlin-Sovol_SV01/releases).
 
+## Configuring Marlin 2.0
+
+You can find the Configuration Files for Marlin in the Folder "config". Choose the correct Version according to your printer and copy the folders entire content over the "Marlin" directory.
+
 ## Building Marlin 2.0
 
 To build Marlin 2.0 you'll need [Arduino IDE 1.8.8 or newer](https://www.arduino.cc/en/main/software) or [PlatformIO](http://docs.platformio.org/en/latest/ide.html#platformio-ide). Detailed build and install instructions are posted at:
